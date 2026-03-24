@@ -90,10 +90,8 @@ while True:
                            cv2.FONT_HERSHEY_SIMPLEX, 0.8, (0, 255, 0), 2)
                 plate_detected = True
     
-    # Add title/label on the camera window
     cv2.putText(frame, "Number Plate Detector", (10, 30), cv2.FONT_HERSHEY_SIMPLEX, 1, (255, 255, 255), 2)
     
-    # Show message when no plate is detected
     if not plate_detected:
         cv2.putText(frame, "No license plate detected", (10, h - 30), cv2.FONT_HERSHEY_SIMPLEX, 0.7, (0, 0, 255), 2)
     if cv2.waitKey(1) & 0xFF == ord('q'):
